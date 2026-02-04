@@ -2,6 +2,42 @@
 
 A complete feedback management system for educational institutes with role-based access control for Admins, Teachers, and Students. Features a sophisticated course-subject hierarchy and dynamic feedback forms.
 
+## 🎥 Demo Videos
+
+See the system in action! Watch role-specific demonstrations:
+
+### 👨‍💼 Admin Demo
+[![Admin Demo](https://img.shields.io/badge/▶️_Watch-Admin_Demo-red?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/108ZLCxcYA0Ew7wjsDyOHnyWqeyqh8VZV/view?usp=sharing)
+
+**Features demonstrated:**
+- User management and role assignment
+- Creating courses with subject collections
+- Building dynamic feedback forms
+- Viewing detailed feedback with student information
+
+---
+
+### 👨‍🏫 Teacher Demo
+[![Teacher Demo](https://img.shields.io/badge/▶️_Watch-Teacher_Demo-blue?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/1dp1dutHXxkBaAUFD9MSCXZW3NMuo8R6S/view?usp=sharing)
+
+**Features demonstrated:**
+- Creating and managing subjects
+- Viewing anonymous student feedback
+- Analyzing feedback statistics and trends
+
+---
+
+### 👨‍🎓 Student Demo
+[![Student Demo](https://img.shields.io/badge/▶️_Watch-Student_Demo-green?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/1OFjR2PdYzTaM99T4KPztjDq6HKQu1sGP/view?usp=sharing)
+
+**Features demonstrated:**
+- Registration with semester and department
+- Browsing and enrolling in courses
+- Submitting feedback through dynamic forms
+- Viewing submission history
+
+---
+
 ## Features
 
 ### Three User Roles:
