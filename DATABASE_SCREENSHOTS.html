@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Table Screenshots</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .table-container {
+            background: white;
+            margin: 30px auto;
+            max-width: 1200px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        h2 {
+            background: #2c3e50;
+            color: white;
+            margin: 0;
+            padding: 15px 20px;
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th {
+            background: #34495e;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #2c3e50;
+        }
+
+        td {
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            font-family: 'Courier New', monospace;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        tr:nth-child(odd) {
+            background: white;
+        }
+
+        .null {
+            color: #999;
+            font-style: italic;
+        }
+
+        .instruction {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="instruction">
+        <h3>📸 How to Take Screenshots for Your Report:</h3>
+        <ol>
+            <li>Open this HTML file in your browser (Chrome/Edge/Firefox)</li>
+            <li>Use <strong>Snipping Tool</strong> (Windows) or screenshot tool to capture each table</li>
+            <li>Save each screenshot with a descriptive name (e.g., "users_table.png")</li>
+            <li>Insert these images into your project report</li>
+        </ol>
+        <p><strong>Tip:</strong> You can also use the browser's built-in screenshot feature (F12 → Right-click on table
+            → Capture node screenshot)</p>
+    </div>
+
+    <!-- USERS TABLE -->
+    <div class="table-container">
+        <h2>Table: users</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>user_id</th>
+                    <th>username</th>
+                    <th>email</th>
+                    <th>password</th>
+                    <th>role</th>
+                    <th>name</th>
+                    <th>semester</th>
+                    <th>department</th>
+                    <th>created_at</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>admin1</td>
+                    <td>admin1@gmail.com</td>
+                    <td>$2a$10$YourHashedPasswordHere1</td>
+                    <td>admin</td>
+                    <td>Dr. Rajesh Kumar</td>
+                    <td class="null">NULL</td>
+                    <td class="null">NULL</td>
+                    <td>2024-01-15 10:30:00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>admin2</td>
+                    <td>admin2@gmail.com</td>
+                    <td>$2a$10$YourHashedPasswordHere2</td>
+                    <td>admin</td>
+                    <td>Prof. Priya Sharma</td>
+                    <td class="null">NULL</td>
+                    <td class="null">NULL</td>
+                    <td>2024-01-15 10:35:00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>teacher1</td>
+                    <td>teacher1@gmail.com</td>
+                    <td>$2a$10$YourHashedPasswordHere3</td>
+                    <td>teacher</td>
+                    <td>Dr. Amit Verma</td>
+                    <td class="null">NULL</td>
+                    <td class="null">NULL</td>
+                    <td>2024-01-16 09:15:00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>teacher2</td>
+                    <td>teacher2@gmail.com</td>
+                    <td>$2a$10$YourHashedPasswordHere4</td>
+                    <td>teacher</td>
+                    <td>Prof. Sneha Patel</td>
+                    <td class="null">NULL</td>
+                    <td class="null">NULL</td>
+                    <td>2024-01-16 09:20:00</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>student1</td>
+                    <td>student1@gmail.com</td>
+                    <td>$2a$10$YourHashedPasswordHere10</td>
+                    <td>student</td>
+                    <td>Arjun Sharma</td>
+                    <td>1</td>
+                    <td>Computer Science</td>
+                    <td>2024-01-20 14:00:00</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>student2</td>
+                    <td>student2@gmail.com</td>
+                    <td>$2a$10$YourHashedPasswordHere11</td>
+                    <td>student</td>
+                    <td>Priya Nair</td>
+                    <td>1</td>
+                    <td>Computer Science</td>
+                    <td>2024-01-20 14:05:00</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>student3</td>
+                    <td>student3@gmail.com</td>
+                    <td>$2a$10$YourHashedPasswordHere12</td>
+                    <td>student</td>
+                    <td>Rohan Kapoor</td>
+                    <td>1</td>
+                    <td>Computer Science</td>
+                    <td>2024-01-20 14:10:00</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>student4</td>
+                    <td>student4@gmail.com</td>
+                    <td>$2a$10$YourHashedPasswordHere13</td>
+                    <td>student</td>
+                    <td>Sneha Iyer</td>
+                    <td>2</td>
+                    <td>Computer Science</td>
+                    <td>2024-01-21 11:30:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SUBJECTS TABLE -->
+    <div class="table-container">
+        <h2>Table: subjects</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>subject_id</th>
+                    <th>title</th>
+                    <th>description</th>
+                    <th>code</th>
+                    <th>teacher_id</th>
+                    <th>created_at</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Data Structures</td>
+                    <td>Fundamental data structures and algorithms</td>
+                    <td>CS201</td>
+                    <td>3</td>
+                    <td>2024-01-18 10:00:00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Database Management Systems</td>
+                    <td>Relational databases and SQL</td>
+                    <td>CS301</td>
+                    <td>3</td>
+                    <td>2024-01-18 10:15:00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Web Development</td>
+                    <td>HTML, CSS, JavaScript, and modern frameworks</td>
+                    <td>CS202</td>
+                    <td>4</td>
+                    <td>2024-01-18 11:00:00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Computer Networks</td>
+                    <td>Network protocols and architecture</td>
+                    <td>CS302</td>
+                    <td>4</td>
+                    <td>2024-01-18 11:15:00</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Operating Systems</td>
+                    <td>OS concepts and system programming</td>
+                    <td>CS203</td>
+                    <td>5</td>
+                    <td>2024-01-18 14:00:00</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Software Engineering</td>
+                    <td>Software development lifecycle and methodologies</td>
+                    <td>CS303</td>
+                    <td>5</td>
+                    <td>2024-01-18 14:15:00</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Digital Electronics</td>
+                    <td>Logic gates and digital circuits</td>
+                    <td>EC101</td>
+                    <td>6</td>
+                    <td>2024-01-19 09:00:00</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Python Programming</td>
+                    <td>Introduction to Python</td>
+                    <td>CS101</td>
+                    <td>8</td>
+                    <td>2024-01-19 10:30:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- COURSES TABLE -->
+    <div class="table-container">
+        <h2>Table: courses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>course_id</th>
+                    <th>title</th>
+                    <th>description</th>
+                    <th>code</th>
+                    <th>semester</th>
+                    <th>department</th>
+                    <th>created_at</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Semester 1 - Computer Science</td>
+                    <td>First semester core subjects for CS</td>
+                    <td>CS-SEM1</td>
+                    <td>1</td>
+                    <td>Computer Science</td>
+                    <td>2024-01-22 09:00:00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Semester 2 - Computer Science</td>
+                    <td>Second semester core subjects for CS</td>
+                    <td>CS-SEM2</td>
+                    <td>2</td>
+                    <td>Computer Science</td>
+                    <td>2024-01-22 09:15:00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Semester 3 - Computer Science</td>
+                    <td>Third semester core subjects for CS</td>
+                    <td>CS-SEM3</td>
+                    <td>3</td>
+                    <td>Computer Science</td>
+                    <td>2024-01-22 09:30:00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Semester 1 - Electronics</td>
+                    <td>First semester core subjects for EC</td>
+                    <td>EC-SEM1</td>
+                    <td>1</td>
+                    <td>Electronics</td>
+                    <td>2024-01-22 10:00:00</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Semester 2 - Electronics</td>
+                    <td>Second semester core subjects for EC</td>
+                    <td>EC-SEM2</td>
+                    <td>2</td>
+                    <td>Electronics</td>
+                    <td>2024-01-22 10:15:00</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Semester 1 - Mechanical</td>
+                    <td>First semester core subjects for ME</td>
+                    <td>ME-SEM1</td>
+                    <td>1</td>
+                    <td>Mechanical</td>
+                    <td>2024-01-22 10:30:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ENROLLMENTS TABLE -->
+    <div class="table-container">
+        <h2>Table: enrollments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>enrollment_id</th>
+                    <th>student_id</th>
+                    <th>course_id</th>
+                    <th>enrolled_at</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>2024-01-25 14:30:00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>2024-01-25 14:35:00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>1</td>
+                    <td>2024-01-25 14:40:00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>2024-01-25 15:00:00</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>9</td>
+                    <td>2</td>
+                    <td>2024-01-25 15:05:00</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>10</td>
+                    <td>2</td>
+                    <td>2024-01-25 15:10:00</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>11</td>
+                    <td>3</td>
+                    <td>2024-01-26 10:00:00</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>12</td>
+                    <td>3</td>
+                    <td>2024-01-26 10:05:00</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>13</td>
+                    <td>4</td>
+                    <td>2024-01-26 11:00:00</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>14</td>
+                    <td>4</td>
+                    <td>2024-01-26 11:05:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FEEDBACK_FORMS TABLE -->
+    <div class="table-container">
+        <h2>Table: feedback_forms</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>form_id</th>
+                    <th>course_id</th>
+                    <th>title</th>
+                    <th>description</th>
+                    <th>is_active</th>
+                    <th>created_at</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>Mid-Semester Feedback - CS Sem 1</td>
+                    <td>Feedback for first semester CS subjects</td>
+                    <td>1</td>
+                    <td>2024-01-28 09:00:00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>Mid-Semester Feedback - CS Sem 2</td>
+                    <td>Feedback for second semester CS subjects</td>
+                    <td>1</td>
+                    <td>2024-01-28 09:15:00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>End-Semester Feedback - CS Sem 3</td>
+                    <td>Final feedback for third semester CS subjects</td>
+                    <td>1</td>
+                    <td>2024-01-28 09:30:00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>Mid-Semester Feedback - EC Sem 1</td>
+                    <td>Feedback for first semester EC subjects</td>
+                    <td>1</td>
+                    <td>2024-01-28 10:00:00</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>Mid-Semester Feedback - EC Sem 2</td>
+                    <td>Feedback for second semester EC subjects</td>
+                    <td>1</td>
+                    <td>2024-01-28 10:15:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FEEDBACK_RESPONSES TABLE -->
+    <div class="table-container">
+        <h2>Table: feedback_responses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>response_id</th>
+                    <th>student_id</th>
+                    <th>form_id</th>
+                    <th>subject_id</th>
+                    <th>question_id</th>
+                    <th>response_value</th>
+                    <th>rating</th>
+                    <th>created_at</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>1</td>
+                    <td class="null">NULL</td>
+                    <td>5</td>
+                    <td>2024-02-01 10:30:00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td class="null">NULL</td>
+                    <td>4</td>
+                    <td>2024-02-01 10:30:05</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>3</td>
+                    <td class="null">NULL</td>
+                    <td>5</td>
+                    <td>2024-02-01 10:30:10</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>The hands-on coding exercises were excellent!</td>
+                    <td class="null">NULL</td>
+                    <td>2024-02-01 10:30:15</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td class="null">NULL</td>
+                    <td>4</td>
+                    <td>2024-02-01 10:35:00</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>1</td>
+                    <td class="null">NULL</td>
+                    <td>5</td>
+                    <td>2024-02-01 11:00:00</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>Very interactive and engaging classes</td>
+                    <td class="null">NULL</td>
+                    <td>2024-02-01 11:00:20</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td class="null">NULL</td>
+                    <td>5</td>
+                    <td>2024-02-02 14:00:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- COURSE_SUBJECTS TABLE -->
+    <div class="table-container">
+        <h2>Table: course_subjects</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>cs_id</th>
+                    <th>course_id</th>
+                    <th>subject_id</th>
+                    <th>created_at</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>2024-01-23 09:00:00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2024-01-23 09:00:05</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2024-01-23 09:15:00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>2024-01-23 09:15:05</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2024-01-23 09:30:00</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>2024-01-23 09:30:05</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>2024-01-23 09:30:10</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>2024-01-23 10:00:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

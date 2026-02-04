@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4472C4;
+    color: white;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+.center {
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>RELATIONAL SCHEMA</h2>
+<ul>
+<li><strong>Users</strong> (<u>user_id</u>, username, email, password, role, name, semester, department)</li>
+<li><strong>Subjects</strong> (<u>subject_id</u>, title, description, code, teacher_id)
+    <br>Foreign Key: teacher_id → Users(user_id)</li>
+<li><strong>Courses</strong> (<u>course_id</u>, title, description, code, semester, department)</li>
+<li><strong>Course_Subjects</strong> (<u>cs_id</u>, course_id, subject_id)
+    <br>Foreign Key: course_id → Courses(course_id)
+    <br>Foreign Key: subject_id → Subjects(subject_id)</li>
+<li><strong>Enrollments</strong> (<u>enrollment_id</u>, student_id, course_id, enrolled_at)
+    <br>Foreign Key: student_id → Users(user_id)
+    <br>Foreign Key: course_id → Courses(course_id)</li>
+<li><strong>Feedback_Forms</strong> (<u>form_id</u>, course_id, title, description, is_active)
+    <br>Foreign Key: course_id → Courses(course_id)</li>
+<li><strong>Feedback_Form_Questions</strong> (<u>question_id</u>, form_id, question_text, question_type, question_order)
+    <br>Foreign Key: form_id → Feedback_Forms(form_id)</li>
+<li><strong>Feedback_Responses</strong> (<u>response_id</u>, student_id, form_id, subject_id, question_id, response_value, rating)
+    <br>Foreign Key: student_id → Users(user_id)
+    <br>Foreign Key: form_id → Feedback_Forms(form_id)
+    <br>Foreign Key: subject_id → Subjects(subject_id)
+    <br>Foreign Key: question_id → Feedback_Form_Questions(question_id)</li>
+</ul>
+
+<h3>Table 4.1 (a): users</h3>
+<table>
+<tr>
+    <th class="center">Serial No.</th>
+    <th>Column Name</th>
+    <th>Data-type</th>
+    <th>Length/Values</th>
+</tr>
+<tr>
+    <td class="center">1</td>
+    <td>user_id (PK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">2</td>
+    <td>username</td>
+    <td>VARCHAR</td>
+    <td>50</td>
+</tr>
+<tr>
+    <td class="center">3</td>
+    <td>email</td>
+    <td>VARCHAR</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td class="center">4</td>
+    <td>password</td>
+    <td>VARCHAR</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">5</td>
+    <td>role</td>
+    <td>ENUM</td>
+    <td>admin, teacher, student</td>
+</tr>
+<tr>
+    <td class="center">6</td>
+    <td>name</td>
+    <td>VARCHAR</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td class="center">7</td>
+    <td>semester</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">8</td>
+    <td>department</td>
+    <td>VARCHAR</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td class="center">9</td>
+    <td>created_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td class="center">10</td>
+    <td>updated_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+</table>
+
+<h3>Table 4.1 (b): subjects</h3>
+<table>
+<tr>
+    <th class="center">Serial No.</th>
+    <th>Column Name</th>
+    <th>Data-type</th>
+    <th>Length/Values</th>
+</tr>
+<tr>
+    <td class="center">1</td>
+    <td>subject_id (PK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">2</td>
+    <td>title</td>
+    <td>VARCHAR</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td class="center">3</td>
+    <td>description</td>
+    <td>TEXT</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td class="center">4</td>
+    <td>code</td>
+    <td>VARCHAR</td>
+    <td>50</td>
+</tr>
+<tr>
+    <td class="center">5</td>
+    <td>teacher_id (FK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">6</td>
+    <td>created_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td class="center">7</td>
+    <td>updated_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+</table>
+
+<h3>Table 4.1 (c): courses</h3>
+<table>
+<tr>
+    <th class="center">Serial No.</th>
+    <th>Column Name</th>
+    <th>Data-type</th>
+    <th>Length/Values</th>
+</tr>
+<tr>
+    <td class="center">1</td>
+    <td>course_id (PK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">2</td>
+    <td>title</td>
+    <td>VARCHAR</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td class="center">3</td>
+    <td>description</td>
+    <td>TEXT</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td class="center">4</td>
+    <td>code</td>
+    <td>VARCHAR</td>
+    <td>50</td>
+</tr>
+<tr>
+    <td class="center">5</td>
+    <td>semester</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">6</td>
+    <td>department</td>
+    <td>VARCHAR</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td class="center">7</td>
+    <td>created_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td class="center">8</td>
+    <td>updated_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+</table>
+
+<h3>Table 4.1 (d): course_subjects</h3>
+<table>
+<tr>
+    <th class="center">Serial No.</th>
+    <th>Column Name</th>
+    <th>Data-type</th>
+    <th>Length/Values</th>
+</tr>
+<tr>
+    <td class="center">1</td>
+    <td>cs_id (PK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">2</td>
+    <td>course_id (FK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">3</td>
+    <td>subject_id (FK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">4</td>
+    <td>created_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+</table>
+
+<h3>Table 4.1 (e): enrollments</h3>
+<table>
+<tr>
+    <th class="center">Serial No.</th>
+    <th>Column Name</th>
+    <th>Data-type</th>
+    <th>Length/Values</th>
+</tr>
+<tr>
+    <td class="center">1</td>
+    <td>enrollment_id (PK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">2</td>
+    <td>student_id (FK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">3</td>
+    <td>course_id (FK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">4</td>
+    <td>enrolled_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+</table>
+
+<h3>Table 4.1 (f): feedback_forms</h3>
+<table>
+<tr>
+    <th class="center">Serial No.</th>
+    <th>Column Name</th>
+    <th>Data-type</th>
+    <th>Length/Values</th>
+</tr>
+<tr>
+    <td class="center">1</td>
+    <td>form_id (PK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">2</td>
+    <td>course_id (FK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">3</td>
+    <td>title</td>
+    <td>VARCHAR</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td class="center">4</td>
+    <td>description</td>
+    <td>TEXT</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td class="center">5</td>
+    <td>is_active</td>
+    <td>BOOLEAN</td>
+    <td>true/false</td>
+</tr>
+<tr>
+    <td class="center">6</td>
+    <td>created_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td class="center">7</td>
+    <td>updated_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+</table>
+
+<h3>Table 4.1 (g): feedback_form_questions</h3>
+<table>
+<tr>
+    <th class="center">Serial No.</th>
+    <th>Column Name</th>
+    <th>Data-type</th>
+    <th>Length/Values</th>
+</tr>
+<tr>
+    <td class="center">1</td>
+    <td>question_id (PK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">2</td>
+    <td>form_id (FK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">3</td>
+    <td>question_text</td>
+    <td>TEXT</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td class="center">4</td>
+    <td>question_type</td>
+    <td>ENUM</td>
+    <td>rating, text, choice</td>
+</tr>
+<tr>
+    <td class="center">5</td>
+    <td>question_order</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">6</td>
+    <td>created_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+</table>
+
+<h3>Table 4.1 (h): feedback_responses</h3>
+<table>
+<tr>
+    <th class="center">Serial No.</th>
+    <th>Column Name</th>
+    <th>Data-type</th>
+    <th>Length/Values</th>
+</tr>
+<tr>
+    <td class="center">1</td>
+    <td>response_id (PK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">2</td>
+    <td>student_id (FK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">3</td>
+    <td>form_id (FK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">4</td>
+    <td>subject_id (FK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">5</td>
+    <td>question_id (FK)</td>
+    <td>INT</td>
+    <td>255</td>
+</tr>
+<tr>
+    <td class="center">6</td>
+    <td>response_value</td>
+    <td>TEXT</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td class="center">7</td>
+    <td>rating</td>
+    <td>INT</td>
+    <td>1-5</td>
+</tr>
+<tr>
+    <td class="center">8</td>
+    <td>created_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td class="center">9</td>
+    <td>updated_at</td>
+    <td>TIMESTAMP</td>
+    <td>-</td>
+</tr>
+</table>
+
+</body>
+</html>
